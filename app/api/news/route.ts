@@ -7,7 +7,7 @@ export async function GET() {
    
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'SpecialtyModule/1.0'
+        'User-Agent': 'SpecialtyModule/1.0' 
       }
     });
     

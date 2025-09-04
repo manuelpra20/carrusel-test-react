@@ -5,7 +5,7 @@ export async function GET() {
     const apiKey = 'aebf21c727de4a519852d1630aecc6d7';
     const url = ` https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
    
-    const response = await fetch(url, {
+    const response = await fetch(url, { 
       headers: {
         'User-Agent': 'SpecialtyModule/1.0' 
       }

@@ -67,12 +67,12 @@ const SpecialtySection = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % Math.max(1, articles.length - 2));
+    setCurrentIndex((prev) => (prev + 1) % Math.max(1, articles.length - 4));
   };
 
   const prevSlide = () => {
     setCurrentIndex((prev) => 
-      prev === 0 ? Math.max(0, articles.length - 3) : prev - 1
+      prev === 0 ? Math.max(0, articles.length - 5) : prev - 1
     );
   };
 
@@ -80,7 +80,7 @@ const SpecialtySection = () => {
     if (articles.length === 0) return [];
     
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const index = (currentIndex + i) % articles.length;
       visible.push(articles[index]);
     }
@@ -122,16 +122,6 @@ const SpecialtySection = () => {
         <h2 className="specialty-title">What is the Specialty Of Us?</h2>
         
         <div className="carousel-wrapper">
-          <button 
-            className="carousel-btn carousel-btn-prev" 
-            onClick={prevSlide}
-            disabled={articles.length <= 3}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="15,18 9,12 15,6"></polyline>
-            </svg>
-          </button>
-          
           <div className="carousel-container">
             <div className="carousel-track">
               {visibleArticles.map((article, index) => (
@@ -166,15 +156,27 @@ const SpecialtySection = () => {
             </div>
           </div>
           
-          <button 
-            className="carousel-btn carousel-btn-next" 
-            onClick={nextSlide}
-            disabled={articles.length <= 3}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="9,18 15,12 9,6"></polyline>
-            </svg>
-          </button>
+          <div className="carousel-controls">
+            <button 
+              className="carousel-btn carousel-btn-prev" 
+              onClick={prevSlide}
+              disabled={articles.length <= 5}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            
+            <button 
+              className="carousel-btn carousel-btn-next" 
+              onClick={nextSlide}
+              disabled={articles.length <= 5}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>

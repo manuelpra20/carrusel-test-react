@@ -24,13 +24,12 @@
 
 .carousel-wrapper {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  flex-direction: column;
+  gap: 40px;
   position: relative;
 }
 
 .carousel-container {
-  flex: 1;
   overflow: hidden;
   position: relative;
 }
@@ -42,7 +41,7 @@
 }
 
 .specialty-card {
-  flex: 0 0 calc(33.333% - 20px);
+  flex: 0 0 calc(20% - 24px);
   background: white;
   border-radius: 20px;
   padding: 40px 30px;
@@ -108,6 +107,13 @@
   margin: 0 auto;
 }
 
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
 .carousel-btn {
   width: 50px;
   height: 50px;
@@ -121,7 +127,6 @@
   justify-content: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
 }
 
 .carousel-btn:hover {
@@ -141,14 +146,6 @@
 .carousel-btn:disabled:hover {
   border-color: #e2e8f0;
   color: #64748b;
-}
-
-.carousel-btn-prev {
-  order: 1;
-}
-
-.carousel-btn-next {
-  order: 3;
 }
 
 /* Loading and Error States */
@@ -200,6 +197,7 @@
   }
   
   .specialty-card {
+    flex: 0 0 calc(20% - 32px);
     padding: 50px 35px;
     min-height: 360px;
   }
@@ -213,6 +211,10 @@
   
   .carousel-track {
     gap: 25px;
+  }
+  
+  .specialty-card {
+    flex: 0 0 calc(20% - 20px);
   }
 }
 
@@ -228,11 +230,11 @@
   }
   
   .carousel-wrapper {
-    gap: 20px;
+    gap: 30px;
   }
   
   .specialty-card {
-    flex: 0 0 calc(50% - 15px);
+    flex: 0 0 calc(33.333% - 20px);
     padding: 35px 25px;
     min-height: 300px;
   }
@@ -274,32 +276,11 @@
   }
   
   .carousel-wrapper {
-    flex-direction: column;
     gap: 25px;
   }
   
-  .carousel-container {
-    order: 2;
-  }
-  
-  .carousel-btn-prev {
-    order: 1;
-  }
-  
-  .carousel-btn-next {
-    order: 3;
-  }
-  
-  .carousel-track {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  
   .specialty-card {
-    flex: none;
-    width: 100%;
-    max-width: 350px;
+    flex: 0 0 calc(50% - 15px);
     padding: 30px 20px;
     min-height: 280px;
   }
@@ -320,16 +301,9 @@
     max-width: 260px;
   }
   
-  /* Mobile navigation buttons */
   .carousel-btn {
     width: 40px;
     height: 40px;
-    position: relative;
-  }
-  
-  .carousel-btn-prev,
-  .carousel-btn-next {
-    align-self: center;
   }
 }
 
@@ -348,7 +322,15 @@
     margin-bottom: 35px;
   }
   
+  .carousel-track {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
   .specialty-card {
+    flex: none;
+    width: 100%;
     max-width: 300px;
     padding: 25px 15px;
     min-height: 260px;

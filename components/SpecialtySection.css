@@ -1,7 +1,7 @@
 /* Specialty Section Styles */
 .specialty-section {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background-color: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -13,14 +13,21 @@
 }
 
 .specialty-title {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 43px;
+  font-weight: 100;
   text-align: center;
-  color: #2c3e50;
+  color: #222222;
   margin-bottom: 60px;
   line-height: 1.2;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  
 }
+
+strong{
+      font-weight: 600;
+  }
+
 
 .carousel-wrapper {
   display: flex;
@@ -61,8 +68,8 @@
 }
 
 .card-image-container {
-  width: 120px;
-  height: 120px;
+  width: 255px;
+  height: 255px;
   margin: 0 auto 30px;
   border-radius: 50%;
   overflow: hidden;
@@ -99,7 +106,7 @@
 }
 
 .card-description {
-  font-size: 0.95rem;
+  font-size: 15px;
   color: #64748b;
   line-height: 1.6;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -130,8 +137,8 @@
 }
 
 .carousel-btn:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: #04070b;
+  color: #04070b;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
 }
@@ -183,17 +190,19 @@
 /* Media Queries for Responsiveness */
 
 /* Large Desktop (1200px and up) */
+
 @media (min-width: 1200px) {
   .specialty-container {
-    max-width: 1400px;
+    max-width: 1900px;
   }
   
   .specialty-title {
-    font-size: 3rem;
+   
   }
   
   .carousel-track {
     gap: 40px;
+    margin: 10px;
   }
   
   .specialty-card {
@@ -211,6 +220,7 @@
   
   .carousel-track {
     gap: 25px;
+    margin: 5px;
   }
   
   .specialty-card {

@@ -39,20 +39,20 @@ const SpecialtySection = () => {
         // Fallback data in case API fails
         const fallbackArticles: NewsArticle[] = [
           {
-            title: "Business Innovation Trends",
-            description: "Latest developments in business technology and innovation strategies",
+            title: "Augmented Reality",
+            description: "We hava the batter team to dovelop all! kind of augmented reaity designs and Lakes the experience to other leval",
             urlToImage: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
             url: "#"
           },
           {
-            title: "Market Analysis Report",
-            description: "Comprehensive analysis of current market trends and opportunities",
+            title: "Quick Responset",
+            description: "Anylime you want to talk we are going to be thera tor you",
             urlToImage: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
             url: "#"
           },
           {
-            title: "Digital Transformation",
-            description: "How businesses are adapting to digital-first strategies",
+            title: "Great Communication",
+            description: "We maintain 24/7 communication to cover all your need for the project",
             urlToImage: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg",
             url: "#"
           }
@@ -91,7 +91,7 @@ const SpecialtySection = () => {
     return (
       <section className="specialty-section">
         <div className="specialty-container">
-          <h2 className="specialty-title">What is the Specialty Of Us?</h2>
+          <h2 className="specialty-title">What is the <br /> <strong>Specialty Of Us?</strong></h2>
           <div className="loading-state">
             <div className="loading-spinner"></div>
             <p>Loading latest business news...</p>
@@ -105,7 +105,7 @@ const SpecialtySection = () => {
     return (
       <section className="specialty-section">
         <div className="specialty-container">
-          <h2 className="specialty-title">What is the Specialty Of Us?</h2>
+          <h2 className="specialty-title">What is the <br /> <strong>Specialty Of Us?</strong></h2>
           <div className="error-state">
             <p>Unable to load content at the moment. Please try again later.</p>
           </div>
@@ -119,7 +119,7 @@ const SpecialtySection = () => {
   return (
     <section className="specialty-section">
       <div className="specialty-container">
-        <h2 className="specialty-title">What is the Specialty Of Us?</h2>
+        <h2 className="specialty-title">What is the <br /> <strong>Specialty Of Us?</strong></h2>
         
         <div className="carousel-wrapper">
           <div className="carousel-container">

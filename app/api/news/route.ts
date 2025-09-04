@@ -12,7 +12,7 @@ export async function GET() {
     });
     
     if (!response.ok) {
-      throw new Error(`NewsAPI error: ${response.status}`);
+      throw new Error(`NewsAPI error: ${response.status}`); 
     }
     
     const data = await response.json();
